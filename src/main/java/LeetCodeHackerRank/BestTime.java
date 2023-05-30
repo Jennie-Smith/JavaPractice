@@ -1,5 +1,5 @@
 package LeetCodeHackerRank;
-
+//Best time to buy and sell stock
 public class BestTime {
      public int maxProfit(int[] prices){
         int min_val = Integer.MAX_VALUE;
