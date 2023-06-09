@@ -12,17 +12,12 @@ public class ContainsDuplicate {
         int aTotal = 0;
         int bTotal = 0;
         for (int i = 0; i < a.size(); i++) {
-            for (int j = 0; j < b.size(); j++) {
-                if (a.get(i) > b.get(j)) {
-                    aTotal += 1;
-                    System.out.println(a.get(i));
-                    System.out.println(b.get(j));
-                    System.out.println(aTotal);
-
-                } else if (a.get(i) < b.get(j)) {
-                    bTotal += 1;
-                }
+            if (a.get(i) > b.get(i)) {
+                aTotal++;
+            } else if (a.get(i) < b.get(i)) {
+                bTotal++;
             }
+
         }
         Answer.add(aTotal);
         Answer.add(bTotal);
