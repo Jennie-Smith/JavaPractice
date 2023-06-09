@@ -1,9 +1,22 @@
 package LeetCodeHackerRank;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 
 public class ContainsDuplicate {
+
+    public static List<Integer> compareTriplets(List<Integer> a, List<Integer> b) {
+        List<Integer> Answer = new ArrayList<Integer>();
+        int aTotal = 0;
+        int bTotal = 0;
+        for (int i = 0; i < a.toArray().length; i++) {
+            System.out.println(a);
+        }
+        return Answer;
+
+    }
     public boolean containsDuplicate(int[] nums) {
         HashSet<Integer> check = new HashSet<>();
         for (int i = 0; i < nums.length; i++) {
@@ -23,6 +36,20 @@ public class ContainsDuplicate {
             if(nums[i] == nums[i+1]) return true;
         }
         return false;
+    }
+
+    public static void main(String[] args) {
+        List<Integer> aList = new ArrayList<Integer>();
+        List<Integer> bList = new ArrayList<>();
+        aList.add(5);
+        aList.add(6);
+        aList.add(7);
+        bList.add(3);
+        bList.add(6);
+        bList.add(10);
+        System.out.println(aList);
+        System.out.println(bList);
+        compareTriplets(aList, bList);
     }
 
 }
