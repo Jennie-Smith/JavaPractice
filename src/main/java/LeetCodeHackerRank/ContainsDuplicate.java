@@ -11,9 +11,21 @@ public class ContainsDuplicate {
         List<Integer> Answer = new ArrayList<Integer>();
         int aTotal = 0;
         int bTotal = 0;
-        for (int i = 0; i < a.toArray().length; i++) {
-            System.out.println(a);
+        for (int i = 0; i < a.size(); i++) {
+            for (int j = 0; j < b.size(); j++) {
+                if (a.get(i) > b.get(j)) {
+                    aTotal += 1;
+                    System.out.println(a.get(i));
+                    System.out.println(b.get(j));
+                    System.out.println(aTotal);
+
+                } else if (a.get(i) < b.get(j)) {
+                    bTotal += 1;
+                }
+            }
         }
+        Answer.add(aTotal);
+        Answer.add(bTotal);
         return Answer;
 
     }
@@ -49,7 +61,7 @@ public class ContainsDuplicate {
         bList.add(10);
         System.out.println(aList);
         System.out.println(bList);
-        compareTriplets(aList, bList);
+        System.out.println(compareTriplets(aList, bList));
     }
 
 }
