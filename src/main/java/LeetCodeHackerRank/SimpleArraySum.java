@@ -10,6 +10,5 @@ public class SimpleArraySum {
             sum = sum + ar.get(i);
         }
         return sum;
-
     }
 }
