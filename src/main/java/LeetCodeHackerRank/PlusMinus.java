@@ -7,7 +7,7 @@ import java.util.List;
 
 public class PlusMinus {
     public static void plusMinus(List<Integer> arr) {
-//        int size = arr.size();
+        int size = arr.size();
         int positiveCount = 0;
         int negativeCount = 0;
         int zeroCount = 0;
@@ -20,15 +20,10 @@ public class PlusMinus {
                 negativeCount++;
             }
         }
-        DecimalFormat df_obj = new DecimalFormat("#.######");
-        List<Integer> answer = new ArrayList<>();
-        df_obj.format(positiveCount/arr.size());
-        answer.add(negativeCount/arr.size());
-        answer.add(zeroCount/arr.size());
-        System.out.println(answer);
+        double positiveRatio = (double) positiveCount / size;
+        double negativeRatio = (double) negativeCount / size;
+        double zeroRatio = (double) zeroCount / size;
 
-
-
-
+        System.out.printf("%.6f\n%.6f\n%6.f\n", positiveRatio, negativeRatio, zeroRatio);
     }
 }
